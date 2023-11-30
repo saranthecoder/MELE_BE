@@ -13,7 +13,7 @@ const mailSender = router.get('/sending', async (req, res) => {
                 console.error('Error:', error);
                 res.json({success: false, message: 'Some emails failed to send' });
             } else {
-                console.log('Result:', result);
+                // console.log('Result:', result);
                 res.json({success: true, message: 'All emails sent successfully' });
             }
         });

@@ -5,7 +5,7 @@ let mydata;
 //  accessData(student.roll, student, room);
 const accessData = (Data) => {
     mydata = Data
-    console.log(Data)
+    // console.log(Data)
 }
 
 const sendMail = async ( callback ) => {
@@ -51,7 +51,7 @@ const sendMail = async ( callback ) => {
                             console.log(error);
                             errorCount++;
                         } else {
-                            console.log('Email sent: ' + info.response);
+                            console.log('Email sent: ✅ ' + info.response);
                             successCount++;
                         }
 
@@ -59,6 +59,7 @@ const sendMail = async ( callback ) => {
                         if (successCount + errorCount === mydata.length) {
                             if (errorCount === 0) {
                                 // All emails sent successfully
+                                console.log("Result: All emails sent successfully 🎉 ")
                                 callback(null, 'All emails sent successfully');
                             } else {
                                 // Some emails failed to send

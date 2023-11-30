@@ -75,7 +75,7 @@ const deptExam = async (dataFromFrontend) => {
   // console.log(AllocSeats);
 
 
-  //----- Execption for PE subjects ----------
+  //---------------------- Execption for PE subjects ------------------------------------------------------------------------
 
   let allocateSeats;
   let PEData, PE = [];
@@ -93,8 +93,8 @@ const deptExam = async (dataFromFrontend) => {
 
       PE.push(resultForCase);
       console.log("Case_4 Room allocation done ✅");
-      // PE={resultForCase,resultForCase1}
-      console.log(PE);
+      // console.log(PE);
+      mailData();
       return PE;
 
     } else {
@@ -109,12 +109,13 @@ const deptExam = async (dataFromFrontend) => {
 
       PE.push(resultForCase);
       console.log("Case_5 Room allocation done ✅");
-      // PE={resultForCase,resultForCase1}
-      console.log(PE);
+      // console.log(PE);
+      mailData();
       return PE;
     }
   }
 
+// ------------------------------------------------------------------------------------------------
 
   const CSE1 = async () => {
     console.log("CSE1 subject codes retrieved");
@@ -167,7 +168,6 @@ const deptExam = async (dataFromFrontend) => {
   if (data.CSE3 && !data.CSE1 && !data.CSE2 && !data.CSE4) {
 
     // Only CSE3 data is present
-    // let subjectName = data.CSE3[0].includes("PE-1") ? exeception() : data.CSE3[0];
     yearCSEData = { Data: await CSE3(), subCode: data.CSE3[0], Date: date, Time: timeRange }
 
   }
@@ -182,8 +182,6 @@ const deptExam = async (dataFromFrontend) => {
   if (data.CSE1 && data.CSE2 && !data.CSE3 && !data.CSE4) {
     // Both CSE1 and CSE2 data are present
 
-    // rollsCSE1 = await CSE1();
-    // rollsCSE2 = await CSE2();
     rollsCSE1 = { Data: await CSE1(), subCode: data.CSE1[0], Date: date, Time: timeRange }
     rollsCSE2 = { Data: await CSE2(), subCode: data.CSE2[0], Date: date, Time: timeRange }
 
@@ -251,7 +249,7 @@ const deptExam = async (dataFromFrontend) => {
     resultForCase = {}; // Set a default or handle it as needed
   }
   
-  mailData(resultForCase);
+  mailData();
   return resultForCase;
 };
 

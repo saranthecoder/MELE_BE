@@ -28,4 +28,3 @@ app.use('/mail',mailSender)
 app.listen(3000,()=>{
     console.log("Server is running 🛜 ...")
 })
-
