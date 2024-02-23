@@ -1,7 +1,7 @@
   const mongoose = require('mongoose');
 
   // Define your schemas and models
-  const CSESchema =  new mongoose.Schema({
+  const CSESchema = mongoose.Schema({
     // Define CSE schema fields
     year1: [String],
     year2: [String],
