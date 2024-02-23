@@ -5,7 +5,7 @@ const Room = new mongoose.Schema({
     WB: [String],
     SB: [String],
     EB: [String]
-  }, { timestamps: false });
+  }, { timestamps: false , versionKey:false});
 
 const Rooms = mongoose.model('rooms', Room);
 

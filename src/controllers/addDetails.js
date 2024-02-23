@@ -1,5 +1,5 @@
 // Import necessary modules
-const { CSEModel } = require('../models/rollNumbers'); // Make sure to provide the correct path to your model
+const { CSEModel } = require('../models/rollNumbers'); 
 const Rooms = require('../models/rooms');
 const YearData = require('../models/yearSubjCode');
 

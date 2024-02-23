@@ -17,7 +17,7 @@ const deptYear = router.post('/allocRoom',async(req,res)=>{
   try{
     console.log("Got data from frontend ")
     const data = req.body;
-    // console.log(data);
+    console.log(data);
     const result = await deptExam(data);
     res.send(result);
     // res.send(data);

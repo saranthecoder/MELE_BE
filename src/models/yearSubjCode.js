@@ -27,7 +27,7 @@ const YearDataSchema = new mongoose.Schema({
     //   default: null,
     // }
 
-});
+},{versionKey:false});
 
 const YearData = mongoose.model('YearData', YearDataSchema);
 

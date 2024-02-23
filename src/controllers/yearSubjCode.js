@@ -18,6 +18,7 @@ const getAllData = async () => {
           delete doc[key]; // Removing fields with null values
         }
       }
+      console.log(doc);
       return doc;
     });
 
