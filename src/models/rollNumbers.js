@@ -1,27 +1,27 @@
-const mongoose = require('mongoose');
+  const mongoose = require('mongoose');
 
-// Define your schemas and models
-const CSESchema = mongoose.Schema({
-  // Define CSE schema fields
-  year1: [String],
-  year2: [String],
-  year3: [String],
-  year4: [String],
-});
+  // Define your schemas and models
+  const CSESchema = new mongoose.Schema({
+    // Define CSE schema fields
+    year1: [String],
+    year2: [String],
+    year3: [String],
+    year4: [String],
+  });
 
-// const ECESchema = mongoose.Schema({
-//   // Define ECE schema fields
-//   year1: [String],
-//   year2: [String],
-//   year3: [String],
-//   year4: [String],
-// });
+  // const ECESchema = mongoose.Schema({
+  //   // Define ECE schema fields
+  //   year1: [String],
+  //   year2: [String], 
+  //   year3: [String],
+  //   year4: [String],
+  // });
 
-// Create models for each department
-const CSEModel = mongoose.model('CSE', CSESchema);
-// const ECEModel = mongoose.model('ECE', ECESchema);
+  // Create models for each department
+  const CSEModel = mongoose.model('CSE', CSESchema);
+  // const ECEModel = mongoose.model('ECE', ECESchema);
 
-module.exports ={
-    CSEModel,
-    //ECEModel 
-}
+  module.exports ={
+      CSEModel,
+      //ECEModel 
+  }

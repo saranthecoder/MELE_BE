@@ -6,6 +6,7 @@ const { admin } = require('./src/routes/admin');
 const { rooms } = require('./src/routes/rooms');
 const { subCode, deptYear } = require('./src/routes/yearSubjCode');
 const { mailSender } = require('./src/routes/mailsender');
+const addDetails = require('./src/routes/addDetails');
 
 connection();  //Database connection
 
@@ -19,6 +20,7 @@ app.get('/',(req,res)=>{
 })
 //
 app.use('/auth',admin)  //admin login
+app.use('/addDetails',addDetails)
 app.use('/rooms',rooms)  // rooms retriving from DB
 app.use('/year',subCode)  // subject code retriving from DB 
 app.use('/roll',deptYear) // roll number retriving from DB

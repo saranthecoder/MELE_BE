@@ -26,7 +26,7 @@ let mydata = [
 
 ]
 
-const mailData = async () => {
+const  mailData = async () => {
     try {
         accessData(mydata);
     } catch (err) {

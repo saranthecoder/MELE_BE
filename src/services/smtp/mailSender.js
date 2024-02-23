@@ -2,10 +2,10 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 let mydata;
-//  accessData(student.roll, student, room);
+
 const accessData = (Data) => {
     mydata = Data
-    // console.log(Data)
+ 
 }
 
 const sendMail = async ( callback ) => {

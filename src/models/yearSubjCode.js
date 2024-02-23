@@ -3,20 +3,21 @@ const mongoose = require('mongoose');
 const YearDataSchema = new mongoose.Schema({
     CSE1: {
       type: [String],
-      default: null,
+      // default: null,
     },
     CSE2: {
       type: [String],
-      default: null,
+      // default: null,
     },
     CSE3: {
       type: [String],
-      default: null,
+      // default: null,
     },
     CSE4: {
       type: [String],
-      default: null,
+      // default: null,
     },
+    
     // ECE1: {
     //   type: [String],
     //   default: null,
