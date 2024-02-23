@@ -1,5 +1,5 @@
 // Import necessary modules
-const { CSEModel } = require('../models/rollNumbers'); 
+const { CSEModel } = require('../models/rollNumbers');
 const Rooms = require('../models/rooms');
 const YearData = require('../models/yearSubjCode');
 
@@ -48,32 +48,44 @@ const dropAndSaveRoomNumbers = async (req, res) => {
     }
 };
 
-// Controller to drop existing subjects data and save new data
-const dropAndSaveSubjects = async (req, res) => {
-    try {
-        // Drop existing subjects data
-        await YearData.deleteMany({});
 
-        // Save new subjects data
-        const { CSE1, CSE2, CSE3, CSE4 } = req.body;
-        const addingSubject = new YearData({
-            CSE1,
-            CSE2,
-            CSE3,
-            CSE4
-        });
-        await addingSubject.save();
+// // Controller to drop existing subjects data and save new data
+// const dropAndSaveSubjects = async (req, res) => {
+//     try {
+//         // Drop existing subjects data
+//         await YearData.deleteMany({});
 
-        res.status(200).json({ success: true });
-    } catch (error) {
-        console.error('Error in Dropping and Saving Subjects:', error);
-        res.status(500).json({ success: false, error: 'Internal Server Error' });
-    }
-};
+//         // Save new subjects data
+//         const {_id, CSE1, CSE2, CSE3, CSE4 } = req.body;
+//         const addingSubject = new YearData(
+// _id,
+//             {
+//                 CSE1
+//             },
+//             {
+
+//                 CSE2,
+//             },
+//             {
+
+//                 CSE3,
+//             },
+//             {
+
+//                 CSE4
+//             }
+//         );
+//         await addingSubject.save();
+
+//         res.status(200).json({ success: true });
+//     } catch (error) {
+//         console.error('Error in Dropping and Saving Subjects:', error);
+//         res.status(500).json({ success: false, error: 'Internal Server Error' });
+//     }
+// };
 
 // Export the controllers
 module.exports = {
     dropAndSaveCSEData,
     dropAndSaveRoomNumbers,
-    dropAndSaveSubjects
 };

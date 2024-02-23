@@ -6,6 +6,7 @@ const subCode = router.get('/code',async (req,res)=>{
   try {
     console.log("Fetching data for Subject Codes Year-Dept ...")
     const result = await getAllData();
+    console.log(result)
     res.send(result);
   } catch (error) {
     console.error('Error:', error);
